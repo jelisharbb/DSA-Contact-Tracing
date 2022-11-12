@@ -79,13 +79,6 @@ if userInput == 1:
     userContact = int(input("Contact number: "))
     userEmail = input("Email: ")
 
-    contactTracing[registeredName] = {"Name" : userName}
-    contactTracing[registeredName] = {"Sex" : userSex}
-    contactTracing[registeredName] = {"Age" : userAge}
-    contactTracing[registeredName] = {"Address" : userAddress}
-    contactTracing[registeredName] = {"Contact number" : userContact}
-    contactTracing[registeredName] = {"Email" : userEmail}
-
     print()
     print("Health Information")
     userPositive = input("Have you been diagnosed with COVID? ")
@@ -93,24 +86,15 @@ if userInput == 1:
     userCough = input("Have you had a cough in the past 7 days? ")
     userCommorbidities = input("Do you have commorbidities? ")
 
-    contactTracing[registeredName] = {"CCOVID positive" : userPositive}
-    contactTracing[registeredName] = {"Cold history" : userCold}
-    contactTracing[registeredName] = {"Cough history" : userCough}
-    contactTracing[registeredName] = {"Commorbidities" : userCommorbidities}
-
     print()
     print("Travel History")
     userCrowded = input("Have you recently been in another public and/or crowded location? ")
     userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
     userCity = input("Have you traveled outside your city in the past 14 days? ")
     userCountry = input("Have you traveled outside the country in the past 14 days? ")
-    
-    contactTracing[registeredName] = {"Public contact" : userCrowded}
-    contactTracing[registeredName] = {"Covid contact" : userCovid}
-    contactTracing[registeredName] = {"Outside city" : userCity}
-    contactTracing[registeredName] = {"Outside country" : userCountry}
+
+    contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail, "CCOVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "Covid contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
 
     print()
     print("Saved successfuly!")
 
-    print(contactTracing)

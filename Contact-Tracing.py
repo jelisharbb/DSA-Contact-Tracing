@@ -82,4 +82,29 @@ if userInput == 1:
     contactTracing["Contact number"] = userContact
     contactTracing["Email"] = userEmail
 
-    print(contactTracing)
+    print()
+    print("Health Information")
+    userPositive = input("Have you been diagnosed with COVID? ")
+    userCold = input("Have you had a cold in the past 7 days? ")
+    userCough = input("Have you had a cough in the past 7 days? ")
+    userCommorbidities = input("Do you have commorbidities? ")
+
+    contactTracing["COVID positive"] = userPositive
+    contactTracing["Cold history"] = userCold
+    contactTracing["Cough history"] = userCold
+    contactTracing["Commorbidities"] = userCommorbidities
+
+    print()
+    print("Travel History")
+    userCrowded = input("Have you recently been in another public and/or crowded location? ")
+    userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
+    userCity = input("Have you traveled outside your city in the past 14 days? ")
+    userCountry = input("Have you traveled outside the country in the past 14 days? ")
+    
+    contactTracing["Public contact"] = userCrowded
+    contactTracing["Covid contact"] = userCovid
+    contactTracing["Outside city"] = userCity
+    contactTracing["Outside country"] = userCountry
+
+    print()
+    print("Saved successfuly!")

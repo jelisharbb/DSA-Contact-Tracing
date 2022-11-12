@@ -40,19 +40,19 @@
 # What do you want to do? (1-3): 3
 # Exit? n
 
-# empty dictionary
+# empty main dictionary
 contactTracing = {}
-
-print()
-print("CONTACT TRACING PROGRAM")
 
 while True:
 
     print()
-    print("Menu:")
-    print("1 -> Add an item")
-    print("2 -> Search an item")
-    print("3 -> Exit")
+    print("CONTACT TRACING PROGRAM")
+
+    print()
+    print("======= \033[1;3mMenu\033[0m =======")
+    print("\033[1m1\033[0m -> Add an item")
+    print("\033[1m2\033[0m -> Search an item")
+    print("\033[1m3\033[0m -> Exit")
 
     # checks if user input is valid
     while True:
@@ -61,7 +61,7 @@ while True:
         if userInput > 0 and userInput <= 3:
             break
         else:
-            print("Invalid number. Try entering numbers from 1 to 3.")
+            print("\033[1;31;40mInvalid number. Try entering numbers from 1 to 3.\033[0m")
 
     # add an item in the dictionary
     if userInput == 1:
@@ -69,58 +69,57 @@ while True:
         registeredName = str(input("Register your name: ")) ; registeredName.title()
     
         print()
-        print("Contact Tracing Form")
+        print("-------- CONTACT TRACING FORM --------")
         
         print()
-        print("Personal Information")
+        print("\033[1mPersonal Information\033[0m")
         userName = input("Name: ")
-        userSex = input("Sex: ")
+        userSex = input("Sex (F/M): ")
         userAge = input("Age: ")
         userAddress = (input("Address: "))
         userContact = input("Contact number: ")
-        userEmail = input("Email: ")
 
         print()
-        print("Health Information")
-        userPositive = input("Have you been diagnosed with COVID? ")
-        userCold = input("Have you had a cold in the past 7 days? ")
-        userCough = input("Have you had a cough in the past 7 days? ")
-        userCommorbidities = input("Do you have commorbidities? ")
+        print("\033[1mHealth Information\033[0m")
+        userPositive = input("Have you been diagnosed with COVID? (Yes/No) ")
+        userCold = input("Have you had a cold in the past 7 days? (Yes/No) ")
+        userCough = input("Have you had a cough in the past 7 days? (Yes/No) ")
+        userCommorbidities = input("Do you have commorbidities? (Yes/No) ")
 
         print()
-        print("Travel History")
-        userCrowded = input("Have you recently been in another public and/or crowded location? ")
-        userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
-        userCity = input("Have you traveled outside your city in the past 14 days? ")
-        userCountry = input("Have you traveled outside the country in the past 14 days? ")
+        print("\033[1mTravel History\033[0m")
+        userCrowded = input("Have you recently been in another public and/or crowded location? (Yes/No) ")
+        userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? (Yes/No) ")
+        userCity = input("Have you traveled outside your city in the past 14 days? (Yes/No) ")
+        userCountry = input("Have you traveled outside the country in the past 14 days? (Yes/No) ")
 
-        contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail, "COVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "COVID contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
+        contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "COVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "COVID contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
 
         print()
-        print("Saved successfully!")
+        print("\033[1;32;40mSaved successfully!\033[0m")
 
     # search an item in the dictionary
     elif userInput == 2:
+        print()
         userSearch = input("Enter the name you want to search for: ")
         if userSearch in contactTracing:
             print()
-            print("Personal Information")
+            print("\033[1mPersonal Information\033[0m")
             print("Name: " + contactTracing[userSearch]["Name"])
             print("Age: " + contactTracing[userSearch]["Age"])
             print("Sex: " + contactTracing[userSearch]["Sex"])
             print("Address: " + contactTracing[userSearch]["Address"])
             print("Contact number: " + contactTracing[userSearch]["Contact number"])
-            print("Email: " + contactTracing[userSearch]["Email"])
 
             print()
-            print("Health Information")          
+            print("\033[1mHealth Information\033[0m")          
             print("COVID positive: " + contactTracing[userSearch]["COVID positive"])            
             print("Cold history: " + contactTracing[userSearch]["Cold history"])            
             print("Cough history: " + contactTracing[userSearch]["Cough history"])            
             print("Commorbidities: " + contactTracing[userSearch]["Commorbidities"])
 
             print()
-            print("Travel History")
+            print("\033[1mTravel History\033[0m")
             print("Public contact: " + contactTracing[userSearch]["Public contact"])            
             print("COVID contact: " + contactTracing[userSearch]["COVID contact"])            
             print("Outside city: " + contactTracing[userSearch]["Outside city"])            
@@ -128,12 +127,15 @@ while True:
 
         else:
             print()
-            print("No record available.")
+            print("\033[1;31;40mNo record available.\033[0m")
 
     # exit the program
     elif userInput == 3:
-        userExit = input("Do you want to exit the program? ")
+        userExit = input("Do you want to exit the program? (YES/NO) ")
         if userExit.upper() == "YES":
             break
         elif userExit.upper() == "NO":
             continue
+
+print()
+print("Thank you.")

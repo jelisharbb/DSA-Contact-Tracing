@@ -48,5 +48,11 @@ print("Menu:")
 print("1 -> Add an item")
 print("2 -> Search an item")
 print("3 -> Exit")
-print()
 
+while True:
+    print()
+    userInput = int(input("Enter the number you want to execute: "))
+    if userInput > 0 and userInput <= 3:
+        break
+    else:
+        print("Invalid number. Try entering numbers from 1 to 3.")

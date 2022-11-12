@@ -110,15 +110,21 @@ while True:
             print("Sex: " + contactTracing[userSearch]["Sex"])
             print("Address: " + contactTracing[userSearch]["Address"])
             print("Contact number: " + contactTracing[userSearch]["Contact number"])
-            print("Email: " + contactTracing[userSearch]["Email"])            
+            print("Email: " + contactTracing[userSearch]["Email"])
+
+            print()
+            print("Health Information")          
             print("COVID positive: " + contactTracing[userSearch]["COVID positive"])            
             print("Cold history: " + contactTracing[userSearch]["Cold history"])            
             print("Cough history: " + contactTracing[userSearch]["Cough history"])            
-            print("Commorbidities: " + contactTracing[userSearch]["Commorbidities"])            
+            print("Commorbidities: " + contactTracing[userSearch]["Commorbidities"])
+
+            print()
+            print("Travel History")
             print("Public contact: " + contactTracing[userSearch]["Public contact"])            
             print("COVID contact: " + contactTracing[userSearch]["COVID contact"])            
             print("Outside city: " + contactTracing[userSearch]["Outside city"])            
-            print("Outside country:" + contactTracing[userSearch]["Outside country"])    
+            print("Outside country:" + contactTracing[userSearch]["Outside country"]) 
 
     # exit the program
     elif userInput == 3:

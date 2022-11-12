@@ -40,61 +40,74 @@
 # What do you want to do? (1-3): 3
 # Exit? n
 
-print()
-print("CONTACT TRACING PROGRAM")
-
-print()
-print("Menu:")
-print("1 -> Add an item")
-print("2 -> Search an item")
-print("3 -> Exit")
-
-# checks if user input is valid
 while True:
-    print()
-    userInput = int(input("Enter the number you want to execute: "))
-    if userInput > 0 and userInput <= 3:
-        break
-    else:
-        print("Invalid number. Try entering numbers from 1 to 3.")
-
-# empty dictionary
-contactTracing = {}
-
-# add an item in the dictionary
-if userInput == 1:
-    print()
-    registeredName = input("Register your name: ")
-    contactTracing[registeredName] = {}
 
     print()
-    print("Contact Tracing Form")
-    
-    print()
-    print("Personal Information")
-    userName = input("Name: ")
-    userSex = input("Sex: ")
-    userAge = int(input("Age: "))
-    userAddress = (input("Address: "))
-    userContact = int(input("Contact number: "))
-    userEmail = input("Email: ")
+    print("CONTACT TRACING PROGRAM")
 
     print()
-    print("Health Information")
-    userPositive = input("Have you been diagnosed with COVID? ")
-    userCold = input("Have you had a cold in the past 7 days? ")
-    userCough = input("Have you had a cough in the past 7 days? ")
-    userCommorbidities = input("Do you have commorbidities? ")
+    print("Menu:")
+    print("1 -> Add an item")
+    print("2 -> Search an item")
+    print("3 -> Exit")
 
-    print()
-    print("Travel History")
-    userCrowded = input("Have you recently been in another public and/or crowded location? ")
-    userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
-    userCity = input("Have you traveled outside your city in the past 14 days? ")
-    userCountry = input("Have you traveled outside the country in the past 14 days? ")
+    # checks if user input is valid
+    while True:
+        print()
+        userInput = int(input("Enter the number you want to execute: "))
+        if userInput > 0 and userInput <= 3:
+            break
+        else:
+            print("Invalid number. Try entering numbers from 1 to 3.")
 
-    contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail, "CCOVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "Covid contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
+    # empty dictionary
+    contactTracing = {}
 
-    print()
-    print("Saved successfuly!")
+    # add an item in the dictionary
+    if userInput == 1:
+        print()
+        registeredName = input("Register your name: ")
+        contactTracing[registeredName].update()
 
+        print()
+        print("Contact Tracing Form")
+        
+        print()
+        print("Personal Information")
+        userName = input("Name: ")
+        userSex = input("Sex: ")
+        userAge = int(input("Age: "))
+        userAddress = (input("Address: "))
+        userContact = int(input("Contact number: "))
+        userEmail = input("Email: ")
+
+        print()
+        print("Health Information")
+        userPositive = input("Have you been diagnosed with COVID? ")
+        userCold = input("Have you had a cold in the past 7 days? ")
+        userCough = input("Have you had a cough in the past 7 days? ")
+        userCommorbidities = input("Do you have commorbidities? ")
+
+        print()
+        print("Travel History")
+        userCrowded = input("Have you recently been in another public and/or crowded location? ")
+        userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
+        userCity = input("Have you traveled outside your city in the past 14 days? ")
+        userCountry = input("Have you traveled outside the country in the past 14 days? ")
+
+        contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail, "CCOVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "Covid contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
+
+        print()
+        print("Saved successfuly!")
+
+    # search an item in the dictionary
+    elif userInput == 2:
+        print()
+
+    # exit the program
+    elif userInput == 3:
+        userExit = input("Do you want to exit the program? ")
+        if userExit.upper() == "YES":
+            break
+        elif userExit.upper() == "NO":
+            continue

@@ -66,8 +66,7 @@ while True:
     # add an item in the dictionary
     if userInput == 1:
         print()
-        registeredName = input("Register your name: ")
-        contactTracing[registeredName] = {}
+        registeredName = str(input("Register your name: ")) ; registeredName.title()
     
         print()
         print("Contact Tracing Form")
@@ -80,8 +79,6 @@ while True:
         userAddress = (input("Address: "))
         userContact = input("Contact number: ")
         userEmail = input("Email: ")
-
-        
 
         # print()
         # print("Health Information")
@@ -114,15 +111,21 @@ while True:
     # search an item in the dictionary
     elif userInput == 2:
         userSearch = input("Enter the name you want to search for: ")
-        for userSearch in contactTracing:
+        if userSearch in contactTracing:
             print()
             print("Personal Information")
-            print("Name: " + contactTracing[registeredName]["Name"])
-            print("Sex: " + contactTracing[registeredName]["Sex"])
-            print("Age: " + contactTracing[registeredName]["Age"])
-            print("Address: " + contactTracing[registeredName]["Address"])
-            print("Contact Number: " + contactTracing[registeredName]["Contact number"])
-            print("Email: " + contactTracing[registeredName]["Email"])
+            print("Name: " + contactTracing[userSearch]["Name"])
+            print("Age: " + contactTracing[userSearch]["Age"])
+            print("Sex: " + contactTracing[userSearch]["Sex"])
+            print("Address: " + contactTracing[userSearch]["Address"])
+            print("Contact number: " + contactTracing[userSearch]["Contact number"])
+            print("Email: " + contactTracing[userSearch]["Email"])
+
+            # print("Sex: " + contactTracing[registeredName]["Sex"])
+            # print("Age: " + contactTracing[registeredName]["Age"])
+            # print("Address: " + contactTracing[registeredName]["Address"])
+            # print("Contact Number: " + contactTracing[registeredName]["Contact number"])
+            # print("Email: " + contactTracing[registeredName]["Email"])
 
     # exit the program
     elif userInput == 3:

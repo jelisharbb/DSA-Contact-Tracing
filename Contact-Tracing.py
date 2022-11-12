@@ -49,6 +49,7 @@ print("1 -> Add an item")
 print("2 -> Search an item")
 print("3 -> Exit")
 
+# checks if user input is valid
 while True:
     print()
     userInput = int(input("Enter the number you want to execute: "))
@@ -56,3 +57,29 @@ while True:
         break
     else:
         print("Invalid number. Try entering numbers from 1 to 3.")
+
+# empty dictionary
+contactTracing = {}
+
+# add an item in the dictionary
+if userInput == 1:
+    print()
+    print("Contact Tracing Form")
+    
+    print()
+    print("Personal Information")
+    userName = input("Name: ")
+    userSex = input("Sex: ")
+    userAge = int(input("Age: "))
+    userAddress = (input("Address: "))
+    userContact = int(input("Contact number: "))
+    userEmail = input("Email: ")
+
+    contactTracing["Name"] = userName
+    contactTracing["Sex"] = userSex
+    contactTracing["Age"] = userAge
+    contactTracing["Address"] = userAddress
+    contactTracing["Contact number"] = userContact
+    contactTracing["Email"] = userEmail
+
+    print(contactTracing)

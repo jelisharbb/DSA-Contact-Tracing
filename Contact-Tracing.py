@@ -124,7 +124,11 @@ while True:
             print("Public contact: " + contactTracing[userSearch]["Public contact"])            
             print("COVID contact: " + contactTracing[userSearch]["COVID contact"])            
             print("Outside city: " + contactTracing[userSearch]["Outside city"])            
-            print("Outside country:" + contactTracing[userSearch]["Outside country"]) 
+            print("Outside country:" + contactTracing[userSearch]["Outside country"])
+
+        else:
+            print()
+            print("No record available.")
 
     # exit the program
     elif userInput == 3:

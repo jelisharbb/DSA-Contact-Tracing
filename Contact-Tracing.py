@@ -64,7 +64,8 @@ contactTracing = {}
 # add an item in the dictionary
 if userInput == 1:
     print()
-    user1 = str(input("Register your full name: "))
+    registeredName = input("Register your name: ")
+    contactTracing[registeredName] = {}
 
     print()
     print("Contact Tracing Form")
@@ -77,12 +78,8 @@ if userInput == 1:
     # userAddress = (input("Address: "))
     # userContact = int(input("Contact number: "))
     # userEmail = input("Email: ")
-    user1["Name"] = userName
-    contactTracing[user1] = {"Name", userName}
 
-    print(contactTracing)
-
-    # contactTracing["Name"] = userName
+    contactTracing[registeredName] = {"Name" : userName}
     # contactTracing["Sex"] = userSex
     # contactTracing["Age"] = userAge
     # contactTracing["Address"] = userAddress
@@ -115,3 +112,5 @@ if userInput == 1:
 
     # print()
     # print("Saved successfuly!")
+
+    print(contactTracing)

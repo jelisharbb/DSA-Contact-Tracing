@@ -68,7 +68,7 @@ while True:
         print()
         registeredName = input("Register your name: ")
         contactTracing[registeredName] = {}
-
+    
         print()
         print("Contact Tracing Form")
         
@@ -80,6 +80,8 @@ while True:
         userAddress = (input("Address: "))
         userContact = input("Contact number: ")
         userEmail = input("Email: ")
+
+        
 
         # print()
         # print("Health Information")
@@ -95,14 +97,16 @@ while True:
         # userCity = input("Have you traveled outside your city in the past 14 days? ")
         # userCountry = input("Have you traveled outside the country in the past 14 days? ")
 
-        # contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail, "CCOVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "Covid contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
+        contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail}
 
-        contactTracing[registeredName]["Name"] = userName
-        contactTracing[registeredName]["Sex"] = userSex
-        contactTracing[registeredName]["Age"] = userAge
-        contactTracing[registeredName]["Address"] = userAddress
-        contactTracing[registeredName]["Contact number"] = userContact
-        contactTracing[registeredName]["Email"] = userEmail
+        # "CCOVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "Covid contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
+
+        # contactTracing[registeredName]["Name"] = userName
+        # contactTracing[registeredName]["Sex"] = userSex
+        # contactTracing[registeredName]["Age"] = userAge
+        # contactTracing[registeredName]["Address"] = userAddress
+        # contactTracing[registeredName]["Contact number"] = userContact
+        # contactTracing[registeredName]["Email"] = userEmail
 
         print()
         print("Saved successfuly!")
@@ -112,7 +116,7 @@ while True:
         userSearch = input("Enter the name you want to search for: ")
         for userSearch in contactTracing:
             print()
-            print("Name", ":", userName)
+            print("Personal Information")
             print("Name: " + contactTracing[registeredName]["Name"])
             print("Sex: " + contactTracing[registeredName]["Sex"])
             print("Age: " + contactTracing[registeredName]["Age"])

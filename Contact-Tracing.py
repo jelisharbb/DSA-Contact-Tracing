@@ -80,33 +80,24 @@ while True:
         userContact = input("Contact number: ")
         userEmail = input("Email: ")
 
-        # print()
-        # print("Health Information")
-        # userPositive = input("Have you been diagnosed with COVID? ")
-        # userCold = input("Have you had a cold in the past 7 days? ")
-        # userCough = input("Have you had a cough in the past 7 days? ")
-        # userCommorbidities = input("Do you have commorbidities? ")
-
-        # print()
-        # print("Travel History")
-        # userCrowded = input("Have you recently been in another public and/or crowded location? ")
-        # userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
-        # userCity = input("Have you traveled outside your city in the past 14 days? ")
-        # userCountry = input("Have you traveled outside the country in the past 14 days? ")
-
-        contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail}
-
-        # "CCOVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "Covid contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
-
-        # contactTracing[registeredName]["Name"] = userName
-        # contactTracing[registeredName]["Sex"] = userSex
-        # contactTracing[registeredName]["Age"] = userAge
-        # contactTracing[registeredName]["Address"] = userAddress
-        # contactTracing[registeredName]["Contact number"] = userContact
-        # contactTracing[registeredName]["Email"] = userEmail
+        print()
+        print("Health Information")
+        userPositive = input("Have you been diagnosed with COVID? ")
+        userCold = input("Have you had a cold in the past 7 days? ")
+        userCough = input("Have you had a cough in the past 7 days? ")
+        userCommorbidities = input("Do you have commorbidities? ")
 
         print()
-        print("Saved successfuly!")
+        print("Travel History")
+        userCrowded = input("Have you recently been in another public and/or crowded location? ")
+        userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
+        userCity = input("Have you traveled outside your city in the past 14 days? ")
+        userCountry = input("Have you traveled outside the country in the past 14 days? ")
+
+        contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail, "COVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "COVID contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
+
+        print()
+        print("Saved successfully!")
 
     # search an item in the dictionary
     elif userInput == 2:
@@ -119,13 +110,15 @@ while True:
             print("Sex: " + contactTracing[userSearch]["Sex"])
             print("Address: " + contactTracing[userSearch]["Address"])
             print("Contact number: " + contactTracing[userSearch]["Contact number"])
-            print("Email: " + contactTracing[userSearch]["Email"])
-
-            # print("Sex: " + contactTracing[registeredName]["Sex"])
-            # print("Age: " + contactTracing[registeredName]["Age"])
-            # print("Address: " + contactTracing[registeredName]["Address"])
-            # print("Contact Number: " + contactTracing[registeredName]["Contact number"])
-            # print("Email: " + contactTracing[registeredName]["Email"])
+            print("Email: " + contactTracing[userSearch]["Email"])            
+            print("COVID positive: " + contactTracing[userSearch]["COVID positive"])            
+            print("Cold history: " + contactTracing[userSearch]["Cold history"])            
+            print("Cough history: " + contactTracing[userSearch]["Cough history"])            
+            print("Commorbidities: " + contactTracing[userSearch]["Commorbidities"])            
+            print("Public contact: " + contactTracing[userSearch]["Public contact"])            
+            print("COVID contact: " + contactTracing[userSearch]["COVID contact"])            
+            print("Outside city: " + contactTracing[userSearch]["Outside city"])            
+            print("Outside country:" + contactTracing[userSearch]["Outside country"])    
 
     # exit the program
     elif userInput == 3:

@@ -64,47 +64,54 @@ contactTracing = {}
 # add an item in the dictionary
 if userInput == 1:
     print()
+    user1 = str(input("Register your full name: "))
+
+    print()
     print("Contact Tracing Form")
     
     print()
     print("Personal Information")
     userName = input("Name: ")
-    userSex = input("Sex: ")
-    userAge = int(input("Age: "))
-    userAddress = (input("Address: "))
-    userContact = int(input("Contact number: "))
-    userEmail = input("Email: ")
+    # userSex = input("Sex: ")
+    # userAge = int(input("Age: "))
+    # userAddress = (input("Address: "))
+    # userContact = int(input("Contact number: "))
+    # userEmail = input("Email: ")
+    user1["Name"] = userName
+    contactTracing[user1] = {"Name", userName}
 
-    contactTracing["Name"] = userName
-    contactTracing["Sex"] = userSex
-    contactTracing["Age"] = userAge
-    contactTracing["Address"] = userAddress
-    contactTracing["Contact number"] = userContact
-    contactTracing["Email"] = userEmail
+    print(contactTracing)
 
-    print()
-    print("Health Information")
-    userPositive = input("Have you been diagnosed with COVID? ")
-    userCold = input("Have you had a cold in the past 7 days? ")
-    userCough = input("Have you had a cough in the past 7 days? ")
-    userCommorbidities = input("Do you have commorbidities? ")
+    # contactTracing["Name"] = userName
+    # contactTracing["Sex"] = userSex
+    # contactTracing["Age"] = userAge
+    # contactTracing["Address"] = userAddress
+    # contactTracing["Contact number"] = userContact
+    # contactTracing["Email"] = userEmail
 
-    contactTracing["COVID positive"] = userPositive
-    contactTracing["Cold history"] = userCold
-    contactTracing["Cough history"] = userCold
-    contactTracing["Commorbidities"] = userCommorbidities
+    # print()
+    # print("Health Information")
+    # userPositive = input("Have you been diagnosed with COVID? ")
+    # userCold = input("Have you had a cold in the past 7 days? ")
+    # userCough = input("Have you had a cough in the past 7 days? ")
+    # userCommorbidities = input("Do you have commorbidities? ")
 
-    print()
-    print("Travel History")
-    userCrowded = input("Have you recently been in another public and/or crowded location? ")
-    userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
-    userCity = input("Have you traveled outside your city in the past 14 days? ")
-    userCountry = input("Have you traveled outside the country in the past 14 days? ")
+    # contactTracing["COVID positive"] = userPositive
+    # contactTracing["Cold history"] = userCold
+    # contactTracing["Cough history"] = userCold
+    # contactTracing["Commorbidities"] = userCommorbidities
+
+    # print()
+    # print("Travel History")
+    # userCrowded = input("Have you recently been in another public and/or crowded location? ")
+    # userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
+    # userCity = input("Have you traveled outside your city in the past 14 days? ")
+    # userCountry = input("Have you traveled outside the country in the past 14 days? ")
     
-    contactTracing["Public contact"] = userCrowded
-    contactTracing["Covid contact"] = userCovid
-    contactTracing["Outside city"] = userCity
-    contactTracing["Outside country"] = userCountry
+    # contactTracing["Public contact"] = userCrowded
+    # contactTracing["Covid contact"] = userCovid
+    # contactTracing["Outside city"] = userCity
+    # contactTracing["Outside country"] = userCountry
 
-    print()
-    print("Saved successfuly!")
+    # print()
+    # print("Saved successfuly!")

@@ -67,7 +67,7 @@ while True:
     if userInput == 1:
         print()
         registeredName = input("Register your name: ")
-        contactTracing[registeredName].update()
+        contactTracing[registeredName] = {}
 
         print()
         print("Contact Tracing Form")
@@ -81,28 +81,37 @@ while True:
         userContact = int(input("Contact number: "))
         userEmail = input("Email: ")
 
-        print()
-        print("Health Information")
-        userPositive = input("Have you been diagnosed with COVID? ")
-        userCold = input("Have you had a cold in the past 7 days? ")
-        userCough = input("Have you had a cough in the past 7 days? ")
-        userCommorbidities = input("Do you have commorbidities? ")
+        # print()
+        # print("Health Information")
+        # userPositive = input("Have you been diagnosed with COVID? ")
+        # userCold = input("Have you had a cold in the past 7 days? ")
+        # userCough = input("Have you had a cough in the past 7 days? ")
+        # userCommorbidities = input("Do you have commorbidities? ")
 
-        print()
-        print("Travel History")
-        userCrowded = input("Have you recently been in another public and/or crowded location? ")
-        userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
-        userCity = input("Have you traveled outside your city in the past 14 days? ")
-        userCountry = input("Have you traveled outside the country in the past 14 days? ")
+        # print()
+        # print("Travel History")
+        # userCrowded = input("Have you recently been in another public and/or crowded location? ")
+        # userCovid = input("Have you recently been in contact with a person with COVID in the past 14 days? ")
+        # userCity = input("Have you traveled outside your city in the past 14 days? ")
+        # userCountry = input("Have you traveled outside the country in the past 14 days? ")
 
-        contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail, "CCOVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "Covid contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
+        # contactTracing[registeredName] = {"Name" : userName, "Sex" : userSex, "Age" : userAge, "Address" : userAddress, "Contact number" : userContact, "Email" : userEmail, "CCOVID positive" : userPositive, "Cold history" : userCold, "Cough history" : userCough, "Commorbidities" : userCommorbidities, "Public contact" : userCrowded, "Covid contact" : userCovid, "Outside city" : userCity, "Outside country" : userCountry}
+
+        contactTracing[registeredName]["Name"] = userName
+        contactTracing[registeredName]["Sex"] = userSex
+        contactTracing[registeredName]["Age"] = userAge
+        contactTracing[registeredName]["Address"] = userAddress
+        contactTracing[registeredName]["Contact number"] = userContact
+        contactTracing[registeredName]["Email"] = userEmail
 
         print()
         print("Saved successfuly!")
 
     # search an item in the dictionary
     elif userInput == 2:
-        print()
+        userSearch = input("Enter the name you want to search for: ")
+        if userSearch in contactTracing:
+            print("Yehey")
 
     # exit the program
     elif userInput == 3:

@@ -40,10 +40,13 @@
 # What do you want to do? (1-3): 3
 # Exit? n
 
-while True:
+# empty dictionary
+contactTracing = {}
 
-    print()
-    print("CONTACT TRACING PROGRAM")
+print()
+print("CONTACT TRACING PROGRAM")
+
+while True:
 
     print()
     print("Menu:")
@@ -60,9 +63,6 @@ while True:
         else:
             print("Invalid number. Try entering numbers from 1 to 3.")
 
-    # empty dictionary
-    contactTracing = {}
-
     # add an item in the dictionary
     if userInput == 1:
         print()
@@ -76,9 +76,9 @@ while True:
         print("Personal Information")
         userName = input("Name: ")
         userSex = input("Sex: ")
-        userAge = int(input("Age: "))
+        userAge = input("Age: ")
         userAddress = (input("Address: "))
-        userContact = int(input("Contact number: "))
+        userContact = input("Contact number: ")
         userEmail = input("Email: ")
 
         # print()
@@ -110,8 +110,15 @@ while True:
     # search an item in the dictionary
     elif userInput == 2:
         userSearch = input("Enter the name you want to search for: ")
-        if userSearch in contactTracing:
-            print("Yehey")
+        for userSearch in contactTracing:
+            print()
+            print("Name", ":", userName)
+            print("Name: " + contactTracing[registeredName]["Name"])
+            print("Sex: " + contactTracing[registeredName]["Sex"])
+            print("Age: " + contactTracing[registeredName]["Age"])
+            print("Address: " + contactTracing[registeredName]["Address"])
+            print("Contact Number: " + contactTracing[registeredName]["Contact number"])
+            print("Email: " + contactTracing[registeredName]["Email"])
 
     # exit the program
     elif userInput == 3:
